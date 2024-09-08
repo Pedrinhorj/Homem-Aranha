@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/crud.css" />
+    <link rel="stylesheet" href="/css/styledom.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Titulo e o DOM das equipes escolhidas -->
+
+      <h1>Batalha Mortal</h1>
+
+      <!-- Equipe de herois -->
+      <h2 class="equipe-hero-title">Equipe de Heróis escolhida</h2>
+      <ul id="equipe-hero">
+        <li></li>
+      </ul>
+
+      <!-- equipe de vilões -->
+      <h2 class="equipe-vilans-title">Equipe de Vilões escolhida</h2>
+
+      <ul id="equipeViloes">
+        <li></li>
+      </ul>
+    </header>
+    <section class="heroes">
+      <div class="conteiner1">
+        <h2 class="title-heroes">Escolha seus Heróis</h2>
+        <article class="heroes-conteiner">
+          <label for=""
+            >Líder
+            <select id="escolha-Lider" name="lider">
+              <option value="">escolha</option>
+              <option value="PeterParker">Peter Parker</option>
+              <option value="MilesMorales">Miles Morales</option>
+              <option value="GwenAranhaFantasma">Gwen Aranha Fantasma</option>
+              <option value="LukeCage">Luke Cage</option>
+              <option value="Nova">Nova</option>
+              <option value="TigreBranco">Tigre Branco</option>
+              <option value="PunhodeFerro">Punho de Ferro</option>
+              <option value="CapitãoAmérica">Capitão América</option>
+            </select>
+          </label>
+        </article>
+        <article class="heroes-conteiner">
+          <label for=""
+            >CoLíder
+            <select id="escolha-CoLider" name="cars">
+              <option value="">escolha</option>
+              <option value="PeterParker">Peter Parker</option>
+              <option value="MilesMorales">Miles Morales</option>
+              <option value="GwenAranhaFantasma">Gwen Aranha Fantasma</option>
+              <option value="LukeCage">Luke Cage</option>
+              <option value="Nova">Nova</option>
+              <option value="TigreBranco">Tigre Branco</option>
+              <option value="PunhodeFerro">Punho de Ferro</option>
+              <option value="CapitãoAmérica">Capitão América</option>
+              <option value="HomemdeFerro">Homem de Ferro</option>
+            </select>
+          </label>
+        </article>
+        <article class="heroes-conteiner">
+          <label for=""
+            >Tanque
+            <select id="escolha-Tanque" name="cars">
+              <option value="">escolha</option>
+              <option value="PeterParker">Peter Parker</option>
+              <option value="MilesMorales">Miles Morales</option>
+              <option value="LukeCage">Luke Cage</option>
+              <option value="Nova">Nova</option>
+              <option value="Wolverine">Wolverine</option>
+              <option value="Venom(Agente)">Venom(Agente)</option>
+              <option value="Venom(EdieBrook)">Venom(Edie Brook)</option>
+              <option value="HomemdeFerro">Homem de Ferro</option>
+              <option value="CapitãoAmérica">Capitão América</option>
+            </select>
+          </label>
+        </article>
+        <article class="heroes-conteiner">
+          <label for=""
+            >Atacante
+            <select id="escolha-Atacante" name="Atacante">
+              <option value="">escolha</option>
+              <option value="PeterParker">Peter Parker</option>
+              <option value="MilesMorales">Miles Morales</option>
+              <option value="LukeCage">Luke Cage</option>
+              <option value="Nova">Nova</option>
+              <option value="Wolverine">Wolverine</option>
+              <option value="Venom(Agente)">Venom(Agente)</option>
+              <option value="Venom(EdieBrook)">Venom(Edie Brook)</option>
+              <option value="Deadpool">Deadpool</option>
+              <option value="HomemdeFerro">Homem de Ferro</option>
+            </select>
+          </label>
+        </article>
+        <button id="botao-Equipe-Herois" onclick="MostrarEquipeHerois()">
+          Adicionar
+        </button>
+      </div>
+    </section>
+
+    <section class="Viloes">
+      <div class="conteiner1">
+        <h2 class="title-viloes">Escolha sua equipe de Vilões</h2>
+        <article>
+          <label for=""
+            >Líder
+            <select id="Vilao-Lider" name="cars">
+              <option value="">escolha</option>
+              <option value="NormanOsborn">Norman Osborn</option>
+              <option value="Kraven">Kraven</option>
+              <option value="Dr.Octopos">Dr. Octopos</option>
+              <option value="ReidoCrime">Rei do Crime</option>
+            </select>
+          </label>
+        </article>
+        <article>
+          <label for=""
+            >CoLíder
+            <select id="Vilao-CoLider" name="cars">
+              <option value="">escolha</option>
+              <option value="Norman Osborn">Norman Osborn</option>
+              <option value="Kraven">Kraven</option>
+              <option value="Dr. Octopos">Dr. Octopos</option>
+              <option value="Rei do Crime">Rei do Crime</option>
+            </select>
+          </label>
+        </article>
+        <article>
+          <label for=""
+            >Atacantes
+            <select id="Vilao-Atacante" name="cars">
+              <option value="">escolha</option>
+              <option value="Duende Verde">Duende Verde</option>
+              <option value="Kraven">Kraven</option>
+              <option value="Dr. Octopos">Dr. Octopos</option>
+              <option value="Rei do Crime">Rei do Crime</option>
+              <option value="Venom">Venom</option>
+              <option value="Electro">Electro</option>
+            </select>
+          </label>
+        </article>
+        <article>
+          <label for=""
+            >Tanque
+            <select id="Vilao-Tanque" name="cars">
+              <option value="">escolha</option>
+              <option value="Duende Verde">Duende Verde</option>
+              <option value="Venom">Venom</option>
+              <option value="Rino">Rino</option>
+              <option value="Rei do Crime">Rei do Crime</option>
+            </select>
+          </label>
+        </article>
+        <button id="botao-Equipe-Viloes" onclick="MostrarEquipeViloes()">
+          Adicionar
+        </button>
+      </div>
+    </section>
+    <script src="/javascript/herois.js"></script>
+    <script src="/javascript/viloes.js"></script>
+  </body>
+</html>

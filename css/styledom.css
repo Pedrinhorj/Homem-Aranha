@@ -1,0 +1,41 @@
+/* Área própria para design do DOM de edição de equipes de super herois */
+/* Fazendo o design do DOM */
+.icones {
+  width: 2em;
+}
+.lista-Herois {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.edit-herois {
+  background-color: #4e4e4e;
+  padding: 2%;
+  width: 30em;
+  border-radius: 10px;
+  display: flex;
+}
+.button {
+  display: flex;
+}
+.button-edit-herois {
+  padding: 1.5%;
+  background-color: black;
+  color: white;
+}
+
+#equipe-hero {
+  padding: 3%;
+  border-radius: 10px;
+}
+#equipeViloes {
+  padding: 10px;
+  border-radius: 10px;
+}
+.div-viloes-buttons {
+  display: flex;
+}
+button {
+  width: 7em;
+  height: 3em;
+}

@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* imagems de capa do header */
+
+.logo-tittle {
+  width: 15em;
+  height: 10em;
+  margin-top: -25em;
+}
+.nav-header {
+  box-shadow: #000000 0 0 10px;
+  background-color: #2c2c2c;
+  border-radius: 15px;
+}
+header {
+  background-image: url(/images/Capa-spider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  height: 20em;
+  display: grid;
+  align-content: end;
+}
+/* Links para páginas */
+
+.link-for {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.link {
+  text-decoration: none;
+  padding: 25%;
+  border-radius: 4px;
+}
+.link:hover {
+  background-color: #640000 !important;
+  text-transform: uppercase;
+  color: white !important;
+}
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* o input de pesquisa */
+.search {
+  display: flex;
+  gap: 20px;
+}
+input {
+  border-radius: 3px;
+}
+.pesquisa {
+  margin-left: -25px;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #9c0000;
+}
+.nav-header {
+  box-shadow: #000000 0 0 5px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding: 1%;
+}
+button {
+  background-color: #9c0000 !important;
+  height: 3em;
+  border: none !important;
+}
+
+/* Reações dos botões */
+button:hover {
+  background-color: #640000 !important;
+  text-transform: uppercase;
+}
+.dropdown-menu {
+  background-color: #000000 !important;
+}
+a {
+  color: white !important;
+}
+a:hover {
+  color: #000000 !important;
+  background-color: white !important;
+}
+/* Corpo da página */
+
+.card {
+  width: 20em;
+  box-shadow: #000000 0 0 5px;
+  border-radius: 20px;
+  height: 35em;
+  width: 22em;
+}
+
+.spider {
+  border-radius: 20px;
+  border-top: blue solid 3px;
+  border-bottom: red solid 3px;
+  width: 17em;
+  height: 25em;
+  margin-left: 40px;
+}
+.cards-aranha {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  height: 40em;
+}
+.link-spider {
+  text-decoration: none;
+  background-color: #535252;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
+}
+.card-text {
+  width: 20em;
+}
+/* Reações ao passar o mouse nos cards */
+
+.card:hover {
+  background-color: #5c5c5c;
+  color: white;
+  padding: 1%;
+  width: 22em;
+  transition-duration: 0.2s;
+}
+.link-spider:hover {
+  background-color: #000000;
+}
+/* Fim das reações */
+
+/* Carrossel aranha  */
+#carrossel-image-item1,
+#carrossel-image-item2,
+#carrossel-image-item3,
+#carouselExample {
+  width: 65em !important;
+}
+#carouselExample {
+  margin-left: 9em;
+}
+
+/* link para o crud */
+
+.link-crud-botao {
+  text-decoration: none;
+  background-color: #000000;
+  padding: 1%;
+  border-radius: 9px;
+}
+.link-crud {
+  margin-left: 44%;
+}
+.link-crud-botao:hover {
+  background-image: url(/imagens/botãojpg.jpg);
+  background-size: 12em;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2%;
+  transition-duration: 0.5s;
+}
+/* Assinatura da página */
+footer {
+  background-color: #535252;
+}
+.Minha-assinatura {
+  background-size: auto;
+  width: 20em;
+}
