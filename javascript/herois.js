@@ -23,16 +23,17 @@ function MostrarEquipeHerois() {
 
 //Mudança rápida para o botão reset
 
-const reset = documentq.getElementById("reset");
+const reset = document.querySelectorAll("reset");
 reset.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function resetar() {
   equipeHero.innerHTML = "";
 }
 // Area para tornar os botões criados pelo DOM, botões clicáveis de maneira que dê para interagir de forma funcional
 
-const editarButtons = document.getElementById("editar");
+const editarButtons = document.querySelectorAll("editar");
 editarButtons.forEach((button) => {
   button.addEventListener("click", editar);
 });
@@ -58,25 +59,25 @@ function editar() {
 
 //Validando mais botões criados pelo DOM
 
-const editarButtonsEquipeHeroisLider = document.getElementById(
+const editarButtonsEquipeHeroisLider = document.querySelectorAll(
   "button-edit-herois-lide"
 );
 editarButtonsEquipeHeroisLider.forEach((button) => {
   button.addEventListener("click", editar);
 });
-const editarButtonsEquipeHeroisCoLider = document.getElementById(
+const editarButtonsEquipeHeroisCoLider = document.querySelectorAll(
   "button-edit-herois-Colide"
 );
 editarButtonsEquipeHeroisCoLider.forEach((button) => {
   button.addEventListener("click", editar);
 });
-const editarButtonsEquipeHeroisAtacante = document.getElementById(
+const editarButtonsEquipeHeroisAtacante = document.querySelectorAll(
   "button-edit-herois-atacante"
 );
 editarButtonsEquipeHeroisAtacante.forEach((button) => {
   button.addEventListener("click", editar);
 });
-const editarButtonsEquipeHeroisTanque = document.getElementById(
+const editarButtonsEquipeHeroisTanque = document.querySelectorAll(
   "button-edit-herois-tanque"
 );
 editarButtonsEquipeHeroisTanque.forEach((button) => {
@@ -89,8 +90,10 @@ function editLider() {
   const lider = prompt("Digite o Líder:");
   equipeHero.innerHTML = `<ul id="equipe-hero" class="lista-Herois">
         <li>Lider:  ${lider}
-         <li>CoLíder:  ${escolhaCoLider.value}</li> <li>Tanque:  ${escolhaTanque.value}</li> 
+         <li>CoLíder:  ${escolhaCoLider.value}</li> 
+         <li>Tanque:  ${escolhaTanque.value}</li> 
          <li> Atacante:  ${escolhaAtacante.value}</li>
+          <div class="button">
         <button id= "editar" onclick= "editar()"><img class="icones" src="/images/icones/botao-editar.png" alt=""></button>
       <button id= "excluir" onclick= "excluir()"><img class="icones" src="/images/icones/excluir.png" alt=""></button>
         <button id= "reset" onclick= "resetar()"><img class="icones" src="/images/icones/reiniciar.png" alt=""></button>
@@ -137,7 +140,7 @@ function editTanque() {
       </ul>`;
 }
 //Aqui é par fazer o mesmo com o botão de deletar
-const excluirButtons = document.getElementById("excluir");
+const excluirButtons = document.querySelectorAll("excluir");
 excluirButtons.forEach((button) => {
   button.addEventListener("click", excluir);
 });
@@ -158,10 +161,11 @@ function excluir() {
   </button>
 </div>`;
 }
-const buttondeletLider = document.getElementById("button-delet-herois-lider");
+const buttondeletLider = document.querySelectorAll("button-delet-herois-lider");
 buttondeletLider.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletLider() {
   equipeHero.innerHTML = `<ul id="equipe-hero" class="lista-Herois">
         <li>Lider: 
@@ -174,50 +178,57 @@ function deletLider() {
         </div>
 </ul>`;
 }
-const buttondeletCoLider = document.getElementById(
+const buttondeletCoLider = document.querySelectorAll(
   "button-delet-herois-Colider"
 );
-buttondeletLider.forEach((button) => {
+buttondeletCoLider.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletCoLider() {
   equipeHero.innerHTML = `<ul id="equipe-hero" class="lista-Herois">
         <li>Lider:  ${escolhaLider.value}
          <li>CoLíder:  </li> <li>Tanque:  ${escolhaTanque.value}</li> 
          <li> Atacante:  ${escolhaAtacante.value}</li>
-    <div class="button">
-        <button id= "editar" onclick= "editar()"><img class="icones" src="/images/icones/botao-editar.png" alt=""></button>
-      <button id= "excluir" onclick= "excluir()"><img class="icones" src="/images/icones/excluir.png" alt=""></button>
+        <div class="button">
+          <button id= "editar" onclick= "editar()"><img class="icones" src="/images/icones/botao-editar.png" alt=""><button>
+          <button id= "excluir" onclick= "excluir()"><img class="icones" src="/images/icones/excluir.png" alt=""></button>
         <button id= "reset" onclick= "resetar()"><img class="icones" src="/images/icones/reiniciar.png" alt=""></button>
         </div>
-</ul>`;
+        </ul>`;
 }
-const buttondeletAtacante = document.getElementById(
+const buttondeletAtacante = document.querySelectorAll(
   "button-delet-herois-atacante"
 );
 buttondeletAtacante.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletAtacante() {
   equipeHero.innerHTML = `<ul id="equipe-hero" class="lista-Herois">
         <li>Lider:  ${escolhaLider.value}
-         <li>CoLíder:  ${escolhaCoLider.value}</li> <li>Tanque:  ${escolhaTanque.value}</li> 
-         <li> Atacante:  </li>
-    <div class="button">
+         <li>CoLíder:  ${escolhaCoLider.value}</li> 
+         <li>Tanque:  ${escolhaTanque.value}</li> 
+         <li> Atacante:                     </li>
+        <div class="button">
         <button id= "editar" onclick= "editar()"><img class="icones" src="/images/icones/botao-editar.png" alt=""></button>
-      <button id= "excluir" onclick= "excluir()"><img class="icones" src="/images/icones/excluir.png" alt=""></button>
+        <button id= "excluir" onclick= "excluir()"><img class="icones" src="/images/icones/excluir.png" alt=""></button>
         <button id= "reset" onclick= "resetar()"><img class="icones" src="/images/icones/reiniciar.png" alt=""></button>
         </div>
-</ul>`;
+        </ul>`;
 }
-const buttondeletTanque = document.getElementById("button-delet-herois-Tanque");
+const buttondeletTanque = document.querySelectorAll(
+  "button-delet-herois-Tanque"
+);
 buttondeletTanque.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletTanque() {
   equipeHero.innerHTML = `<ul id="equipe-hero" class="lista-Herois">
         <li>Lider:  ${escolhaLider.value}
-         <li>CoLíder:  ${escolhaCoLider.value}</li> <li>Tanque:  </li> 
+         <li>CoLíder:  ${escolhaCoLider.value}</li> 
+         <li>Tanque:                          </li> 
          <li> Atacante:  ${escolhaAtacante.value}</li>
     <div class="button">
         <button id= "editar" onclick= "editar()"><img class="icones" src="/images/icones/botao-editar.png" alt=""></button>

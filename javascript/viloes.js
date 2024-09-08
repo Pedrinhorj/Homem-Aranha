@@ -4,12 +4,13 @@ const vilaoCoLider = document.getElementById("Vilao-CoLider");
 const vilaoAtacante = document.getElementById("Vilao-Atacante");
 const vilaoTanque = document.getElementById("Vilao-Tanque");
 let BotaoEquipeViloes = document.getElementById("botao-Equipe-Viloes");
+const equipeViloes = document.getElementById("equipeViloes");
 
 //Area da equipe de vilões
 
 function MostrarEquipeViloes() {
   equipeViloes.innerHTML += ` <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -26,17 +27,18 @@ function MostrarEquipeViloes() {
 
 //mudança rápida para criação de um botão de reset
 
-const resetvilao = document.getElementById("vilao-reset");
+const resetvilao = document.querySelectorAll("vilao-reset");
 resetvilao.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function resetarvilao() {
   equipeViloes.innerHTML = "";
 }
 
-const editarButtonViloes = document.getElementById("vilao-edit");
+const editarButtonViloes = document.querySelectorAll("vilao-edit");
 editarButtonViloes.forEach((button) => {
-  editarButtonViloes.addEventListener("click", editar);
+  button.addEventListener("click", editar);
 });
 
 function EditarEquipesViloes() {
@@ -60,14 +62,17 @@ function EditarEquipesViloes() {
 
 //Area de edição
 
-const buttoneditVilaoLider = document.getElementById("button-edit-Vilao-lider");
+const buttoneditVilaoLider = document.querySelectorAll(
+  "button-edit-Vilao-lider"
+);
 buttoneditVilaoLider.forEach((button) => {
   button.addEventListener("click", editar);
 });
+
 function editLiderVilao() {
   const lider = prompt("Digite o líder:");
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${lider} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -82,16 +87,17 @@ function editLiderVilao() {
         `;
 }
 
-const buttoneditVilaoCoLider = document.getElementById(
+const buttoneditVilaoCoLider = document.querySelectorAll(
   "button-edit-Vilao-CoLider"
 );
 buttoneditVilaoCoLider.forEach((button) => {
   button.addEventListener("click", editar);
 });
+
 function editCoLiderVilao() {
   const CoLider = prompt("Digite o CoLider");
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${CoLider} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -106,7 +112,7 @@ function editCoLiderVilao() {
         `;
 }
 
-const buttoneditVilaoAtacante = document.getElementById(
+const buttoneditVilaoAtacante = document.querySelectorAll(
   "button-edit-Vilao-atacante"
 );
 buttoneditVilaoAtacante.forEach((button) => {
@@ -115,7 +121,7 @@ buttoneditVilaoAtacante.forEach((button) => {
 function editAtacanteVilao() {
   const Atacante = prompt("Digite o Atacante");
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${Atacante} </li> 
@@ -129,16 +135,17 @@ function editAtacanteVilao() {
         </li>
         `;
 }
-const buttoneditVilaoTanque = document.getElementById(
+const buttoneditVilaoTanque = document.querySelectorAll(
   "button-edit-Vilao-tanque"
 );
 buttoneditVilaoTanque.forEach((button) => {
   button.addEventListener("click", editar);
 });
+
 function editTanqueVilao() {
   const Tanque = prompt("Digite o Tanque");
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -155,10 +162,11 @@ function editTanqueVilao() {
 
 //area de botões de delete
 
-const vilaodelet = document.getElementById("vilao-delet");
+const vilaodelet = document.querySelectorAll("vilao-delet");
 vilaodelet.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function DeletarEquipesViloes() {
   equipeViloes.innerHTML += ` <div class="edit-herois">
   <button id="button-delet-Vilao-lider" class="button-edit-herois" onclick="deletLiderVilao()">
@@ -176,13 +184,16 @@ function DeletarEquipesViloes() {
 </div>`;
 }
 //deletar vilão líder
-let buttondeletLiderVilao = document.getElementById("button-delet-Vilao-lider");
+let buttondeletLiderVilao = document.querySelectorAll(
+  "button-delet-Vilao-lider"
+);
 buttondeletLiderVilao.forEach((button) => {
   button.addEventListener("click", deletLiderVilao);
 });
+
 function deletLiderVilao() {
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder:                        </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -199,15 +210,16 @@ function deletLiderVilao() {
 
 //deletar Colídeer
 
-let buttondeletCoLiderVilao = document.getElementById(
+let buttondeletCoLiderVilao = document.querySelectorAll(
   "button-delet-Vilao-Colider"
 );
-buttondelCoLiderVilao.forEach((button) => {
-  button.addEventListener("click", deletCoLiderVilao);
+buttondeletCoLiderVilao.forEach((button) => {
+  button.addEventListener("click", excluir);
 });
+
 function deletCoLiderVilao() {
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider:                    </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 
@@ -221,15 +233,16 @@ function deletCoLiderVilao() {
         </li>
 `;
 }
-let buttondeletAtacanteVilao = document.getElementById(
+let buttondeletAtacanteVilao = document.querySelectorAll(
   "button-delet-Vilao-atacante"
 );
 buttondeletAtacanteVilao.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletAtacanteVilao() {
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante:                    </li> 
@@ -244,15 +257,16 @@ function deletAtacanteVilao() {
 </li>
 `;
 }
-let buttondeletTanqueVilao = document.getElementById(
+let buttondeletTanqueVilao = document.querySelectorAll(
   "button-delet-Vilao-tanque"
 );
 buttondeletTanqueVilao.forEach((button) => {
   button.addEventListener("click", excluir);
 });
+
 function deletTanqueVilao() {
   equipeViloes.innerHTML = `  <li>
-          <ul id="equipe2">
+          <ul id="equipeViloes">
          <li>Líder: ${VilaoLider.value} </li>
         <li>Colider: ${vilaoCoLider.value} </li>
          <li> Atacante: ${vilaoAtacante.value} </li> 

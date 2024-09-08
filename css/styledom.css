@@ -19,7 +19,6 @@
   display: flex;
 }
 .button-edit-herois {
-  padding: 1.5%;
   background-color: black;
   color: white;
 }
@@ -29,7 +28,10 @@
   border-radius: 10px;
 }
 #equipeViloes {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 3%;
   border-radius: 10px;
 }
 .div-viloes-buttons {
